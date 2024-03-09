@@ -13,9 +13,13 @@ Demonstrates various use cases of extracting information from external configura
 1. Class populated from application.properties using @ConfigurationProperties in: com.foo.config.ConfigDemoProperties
 2. Equivalent functionality as (1) using @Value in: com.foo.config.RawDemoProperties
 3. Read using @ConfigurationProperties properties from an alternative file in: com.foo.config.EuropeCapitalProperties
-
+4. Use of Custom Converter in com.foo.config.converter.LocalDateFormatddMMyyyyConverter  com.foo.config.model.LocalDateFormatddMMyyyy 
 
 ## TODO 
+
+- Improve test readability by using `@DisplayName` and `@ParameterizedTest` see [Baeldung - JUnit 5 Parameterized Tests](https://www.baeldung.com/parameterized-tests-junit-5)
+
+## Feature improvements
 1. i18n, l10n see [
    - [Spring Boot Reference Documentation. Internationalization](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.i18n)
    - [Baeldung - Internationalization in Spring Boot](https://www.baeldung.com/spring-boot-internationalization)

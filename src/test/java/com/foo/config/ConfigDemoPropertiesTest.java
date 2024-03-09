@@ -25,7 +25,6 @@ class ConfigDemoPropertiesTest {
 
         assertEquals(LocalDate.of(2020, 2, 16), props.getReleaseDate());
 
-
         var birth = new Person.BirthData();
         birth.setCountry("FRA");
         birth.setDate(LocalDate.of(1961, 12, 15));
@@ -43,18 +42,14 @@ class ConfigDemoPropertiesTest {
         assertEquals(LocalDate.of(2020, 2, 16), props.getDeadlines().get(0));
         assertEquals(LocalDate.of(2020, 2, 17), props.getDeadlines().get(1));
 
-        assertNotNull(props.getSimplePairs());
-        assertEquals(2, props.getSimplePairs().size());
-        assertEquals("value1", props.getSimplePairs().get("key1"));
-        assertEquals("value2", props.getSimplePairs().get("key2"));
-
-
 
         assertNotNull(props.getCountryCodes());
         assertEquals(3, props.getCountryCodes().size());
         assertEquals("GR", props.getCountryCodes().get("Greece"));
         assertEquals("IL", props.getCountryCodes().get("Ireland"));
         assertEquals("USA", props.getCountryCodes().get("United_States"));
+
+        assertEquals(LocalDate.of(1981,12,15), props.getDdMMyyDate().getLocalDate());
     }
 
 }

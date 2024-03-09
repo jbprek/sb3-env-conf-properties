@@ -2,6 +2,7 @@ package com.foo.config;
 
 import com.foo.config.model.DeliveryEnum;
 import com.foo.config.model.ItemPrice;
+import com.foo.config.model.LocalDateFormatddMMyyyy;
 import com.foo.config.model.Person;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
@@ -69,11 +70,13 @@ public class ConfigDemoProperties {
      * Simple map
      */
     @NotEmpty
-    private Map<String,String> simplePairs;
-
-
-    @NotEmpty
     private Map<String, String> countryCodes;
+
+    /**
+    * Converter use example
+     */
+    @NotNull
+    private LocalDateFormatddMMyyyy ddMMyyDate;
 
 
 }
